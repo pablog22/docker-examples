@@ -1,0 +1,15 @@
+# To build the image in Dockerfile
+docker build -t get-started-python .
+# And now we run it
+docker run -p 4000:80 get-started-python
+
+# Create a tag and push it to the repository
+docker tag get-started-python pablog22/get-started-python:part2
+docker push pablog22/get-started-python:part2
+
+docker run -p 4000:80 pablog22/get-started-python:part2
+
+
+docker swarm init --advertise-addr 192.168.99.100
+docker stack deploy -c docker-compose.yml getstartedlab
+docker swarm leave --force
