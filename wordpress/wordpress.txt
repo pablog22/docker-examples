@@ -1,0 +1,15 @@
+https://hub.docker.com/_/wordpress/
+
+docker-compose -f stack.yml up
+
+docker-compose -f docker-compose-pg.yml up
+
+
+From here:
+https://docs.docker.com/compose/wordpress/
+
+docker-compose-example.yml
+
+This works:
+docker-compose -f docker-compose-example.yml up
+docker-compose -f docker-compose-example.yml down
